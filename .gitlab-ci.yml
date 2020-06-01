@@ -1,0 +1,26 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - echo "Build started"
+    - mkdir build
+    - g++ src/main.cpp src/save.cpp src/config.cpp src/compare.cpp -o build/codeDiff
+    - echo "Build ended"
+    - mkdir test
+    - touch test/testFile.txt
+    - cat "hello" > test/testFile.txt
+
+test:
+  stage: test
+  script:
+    - echo "Testing"
+    - echo "Help see,,,"
+    - build/codeDiff
+    - echo "save..."
+    - build/codeDiff save test/testFile.txt test.txt
+    - echo "compare..."
+    - cat "hello x2" > test/testFile.txt
+    - build/codeDiff compare test/testFile.txt test.txt
