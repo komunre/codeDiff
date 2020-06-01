@@ -11,7 +11,7 @@ build:
     - echo "Build ended"
     - mkdir test
     - touch test/testFile.txt
-    - cat "hello" >> test/testFile.txt
+    - echo "hello" >> test/testFile.txt
 
 test:
   stage: test
@@ -22,6 +22,6 @@ test:
     - echo "save..."
     - build/codeDiff save test/testFile.txt test.txt
     - echo "compare..."
-    - cat "hello x2" >> test/testFile.txt
+    - echo "hello x2" >> test/testFile.txt
     - build/codeDiff compare test/testFile.txt test.txt
     - rm test/testFile.txt
