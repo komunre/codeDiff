@@ -2,8 +2,8 @@
 #include "headers/compare.h"
 
 void help(){
-    printf("save <file> - save file in data\n");
-    printf("compare <file> - compare files\n");
+    printf("save <file> <name_in_codeDiff_dir> - save file in data\n");
+    printf("compare <file> <name_in_codeDiff_dir> - compare files\n");
 }
 int main(int argc, char **argv){
     if (argc == 1){
@@ -33,7 +33,7 @@ int main(int argc, char **argv){
                 printf("Error of reading saved file\n");
             }
             if (err == -3){
-                printf("Error of reding comparing file\n");
+                printf("Error of reading comparing file\n");
             }
             return -1;
         }
