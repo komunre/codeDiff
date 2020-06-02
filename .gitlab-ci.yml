@@ -15,6 +15,7 @@ build:
   artifacts:
     paths:
       - build/
+      - test/
 test:
   stage: test
   script:
