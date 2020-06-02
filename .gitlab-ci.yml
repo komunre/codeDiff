@@ -30,3 +30,4 @@ test:
     - echo "hello x2" >> test/testFile.txt
     - build/codeDiff compare test/testFile.txt test.txt
     - rm test/testFile.txt
+    - rm -rf ~/codeDiff
