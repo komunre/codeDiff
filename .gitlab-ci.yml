@@ -20,8 +20,10 @@ test:
   stage: test
   script:
     - echo "Testing"
-    - echo "Help see,,,"
+    - echo "Help see..."
     - build/codeDiff
+    - echo "Creating save folder"
+    - mkdir ~/codeDiff
     - echo "save..."
     - build/codeDiff save test/testFile.txt test.txt
     - echo "compare..."

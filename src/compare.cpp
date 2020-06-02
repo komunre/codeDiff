@@ -25,6 +25,7 @@ int Comparer::Compare(std::string path, Config conf, std::string name){
             else if (line != file_buffer[x]){
                 std::cout << "[-] " << file_buffer[x] << '\n';
                 std::cout << "[+] " << line << '\n';
+                file_buffer.insert(file_buffer.begin() + x, line);
             }
         }
     }
