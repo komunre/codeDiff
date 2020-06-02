@@ -12,7 +12,9 @@ build:
     - mkdir test
     - touch test/testFile.txt
     - echo "hello" >> test/testFile.txt
-
+  artifacts:
+    paths:
+      - build/
 test:
   stage: test
   script:
